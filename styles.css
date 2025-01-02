@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #1a1a1a;
+}
+
+.marquee-img {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    flex-shrink: 0; 
+}
+  
+.marquee{
+    overflow: hidden;
+    width: 100vw;
+    height: 200px; /* must match img height above */
+    position: relative;
+}
+
+#first-marquee-content{
+    display: flex;
+    position: absolute;
+    animation: marquee-right 50s linear infinite;
+}
+
+#second-marquee-content{
+    display: flex;
+    position: absolute;
+    animation: marquee-left 50s linear infinite;
+}
+
+#intro-box {
+    margin-top: 0;
+    background: linear-gradient(282deg,#dd0761,#6119e7);
+    padding: 10rem;
+    animation: gradient-animation 1s ease infinite;
+    text-align: end;
+    color: lightgray;
+    font-family: 'Tanker', sans-serif;
+    font-size: xx-large;
+}
+
+#main-content {
+    margin: 3rem;
+    font-size: larger;
+    font-family: 'Satoshi', sans-serif;
+    color: lightgrey;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #303030;
+    font-family: 'Satoshi', sans-serif;
+}
+
+#article-card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    /* flex-direction: row; */
+}
+
+.article-card {
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.article-card:hover {
+    border: 2px solid #8a4af3;
+}
+
+.card-btn {
+    border: 2px solid #8a4af3;
+    color: lightgray;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #8a4af3;
+    text-decoration: none;
+}
+
+.card-btn:hover {
+    border: 2px solid #4b2983;
+    background-color: #4b2983;
+}
+
+#topster-chart {
+    width: 45rem;
+    height: 20rem;
+}
+
+#header a {
+    color: lightgrey;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 50%;
+}
+
+#page-footer{
+    /* margin: 3rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #303030;
+    color: lightgrey;
+    font-family: 'Satoshi', sans-serif;
+}
+
+#page-footer a {
+    color: lightgrey;
+}
+
+#header a:hover {
+    color: lightgrey;
+    text-decoration: underline;
+    background-color: #8a4af3;
+    display: block;
+    height: 100%;
+    width: 50%;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+@keyframes marquee-right{
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+@keyframes marquee-left {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%)
+    }
+}
