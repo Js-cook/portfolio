@@ -155,3 +155,35 @@ body {
         transform: translateX(0%)
     }
 }
+
+@media (min-width: 480px){
+    #intro-box {
+        margin-top: 0;
+        background: linear-gradient(282deg,#dd0761,#6119e7);
+        padding: 10rem;
+        animation: gradient-animation 1s ease infinite;
+        text-align: center;
+        color: lightgray;
+        font-family: 'Tanker', sans-serif;
+        font-size: large;
+    }
+
+    #header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #303030;
+        font-family: 'Satoshi', sans-serif;
+    }
+
+    #article-card-container{
+        display: block;
+        /* flex-direction: row; */
+    }
+
+    #topster-chart {
+        width: 20rem;
+        height: 10rem;
+    }
+
+}
