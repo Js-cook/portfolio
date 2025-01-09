@@ -156,7 +156,7 @@ body {
     }
 }
 
-@media (min-width: 480px){
+@media (max-width: 480px){
     #intro-box {
         margin-top: 0;
         background: linear-gradient(282deg,#dd0761,#6119e7);
@@ -172,6 +172,7 @@ body {
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
         background-color: #303030;
         font-family: 'Satoshi', sans-serif;
     }
@@ -179,6 +180,10 @@ body {
     #article-card-container{
         display: block;
         /* flex-direction: row; */
+    }
+
+    #article-card-container div {
+        margin-bottom: 3rem;
     }
 
     #topster-chart {
